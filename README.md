@@ -2,7 +2,7 @@
 - 👀 I’m interested in A.I,Machine Learning
 - 🌱 I’m currently learning Game Development
 - 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me Just my mailing me i guess
+- 📫 How to reach me Just by mailing me I guess
 
 <!---
 Jr-Developer-1456/Jr-Developer-1456 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
