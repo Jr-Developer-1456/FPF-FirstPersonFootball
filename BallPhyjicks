@@ -1,0 +1,79 @@
+using UnityEngine;
+
+public class BallPhyjiks : MonoBehaviour
+{
+    [Header("Manager & Derrivations")]
+    public float forwardForce;
+    public float upwardForce;
+    public float Distance;
+    public Rigidbody rb;
+    public Camera playerCamera;
+    public GameObject Ballz;
+    public GameObject Playerz;
+    private float mouseClickTime;
+
+    void Start()
+    {
+        mouseClickTime = 0;
+    }
+
+    void Update()
+    {
+        BCPU();
+    }
+
+    void BCPU()
+    {
+        Distance = Vector3.Distance(Ballz.transform.position, Playerz.transform.position);
+        if (Distance <= 1.5f)
+        {
+            ControllingInput();
+        }
+    }
+
+    void ControllingInput()
+    {
+        if (Input.GetButton("Fire1") && !Input.GetKey(KeyCode.LeftControl))
+        {
+            mouseClickTime += Time.deltaTime * 100;
+        }
+
+        if (Input.GetButtonUp("Fire1") && !Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            ApplyForceBasedOnClickTime();
+            mouseClickTime = 0f;
+        }
+    }
+
+    void ApplyForceBasedOnClickTime()
+    {
+        if (mouseClickTime >= 100f)
+        {
+            ApplyForce(12f, 10f);
+        }
+        else if (mouseClickTime >= 50f && mouseClickTime < 100f)
+        {
+            ApplyForce(9.5f, 7.5f);
+        }
+        else if (mouseClickTime >= 25f && mouseClickTime < 50f)
+        {
+            ApplyForce(7f, 5f);
+        }
+        else if (mouseClickTime >= 10f && mouseClickTime < 25f)
+        {
+            ApplyForce(4.5f, 2.5f);
+        }
+        else if (mouseClickTime < 10f)
+        {
+            ApplyForce(4.5f, 0f);
+        }
+    }
+
+    void ApplyForce(float forward, float upward)
+    {
+        Vector3 forwardDirection = playerCamera.transform.forward * forward;
+        Vector3 upwardDirection = playerCamera.transform.up * upward;
+        Vector3 forceToApply = forwardDirection + upwardDirection;
+        rb.AddForce(forceToApply, ForceMode.VelocityChange);
+    }
+}
