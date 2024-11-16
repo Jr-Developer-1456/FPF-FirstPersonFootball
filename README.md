@@ -1,10 +1,10 @@
-- 👋 Hello, it's me @Jr-Developer-1456
-- 👀 I’m interested in A.I,Machine Learning
-- 🌱 I’m currently learning Game Development
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me Just by mailing me I guess
+Ram Ram! 
+It's me Junior making a Game. 
+However, I am sharing this code to every one I guess I if do😁.
+If I don't the I don't.
 
-<!---
-Jr-Developer-1456/Jr-Developer-1456 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+To use the Code Just Copy and Paste To Unity.
+
+//Note: There are some changes made or Error Fixed in some of the Code.
+        Most of the time it doesnot happen but if somethimes it does. 
+        Thank me later!
